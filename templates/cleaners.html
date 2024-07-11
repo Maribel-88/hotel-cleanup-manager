@@ -1,8 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h2>I'm extending the base template!</h2>
-
     {% for cleaner in cleaners %}
         {{ cleaner.shift_type }}<br>
         {{ cleaner.shift_start }}<br>
