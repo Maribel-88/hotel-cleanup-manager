@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Clean-up Manager</title>
+</head>
+<body>
+    {% for cleaner in cleaners %}
+        {{ cleaner.shift_type }}<br>
+        {{ cleaner.shift_start }}<br>
+        {{ cleaner.shift_end }}<br>
+        {{ cleaner.shift_sched }}<br>
+        {{ cleaner.area_covered }}<br>
+        {{ cleaner.is_urgent }}<br>
+    {% endfor %}
+    
+</body>
+</html>
