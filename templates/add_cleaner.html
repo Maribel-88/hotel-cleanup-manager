@@ -3,20 +3,52 @@
 
     <h3 class="teal-text text-lighten-2 center-align">Add Cleaner</h3>
 
-    <div class="row">
+    <div class="row card-panel grey lighten-5">
         <form class="col s12" methods="POST" action="">
-        <div class="row">
-            <div class="input-field col s12">
-            <i class="fas fa-user-circle prefix teal-text text-lighten-2"></i>
-            <input id="icon_prefix" type="text" class="validate">
-            <label for="icon_prefix">First Name</label>
+            <div class="row">
+                <div class="input-field col s12 m8 offset-m2">
+                    <i class="fas fa-user-circle prefix teal-text text-lighten-2"></i>
+                    <input id="cleaner_name" name="cleaner_name" minlength="5" maxlength="50"
+                     type="text" class="validate" required>
+                    <label for="cleaner_name">Cleaner Name</label>
+                </div>
             </div>
-            <div class="input-field col s12">
-            <i class="fas fa-phone prefix teal-text text-lighten-2"></i>
-            <input id="icon_telephone" type="tel" class="validate">
-            <label for="icon_telephone">Telephone</label>
+            <div class="row">
+                <div class="input-field col s12 m8 offset-m2">
+                    <i class="fas fa-door-closed prefix teal-text text-lighten-2"></i>
+                    <input id="rooms_number" name="rooms_number" minlength="5" maxlength="50"
+                     type="text" class="validate" required>
+                    <label for="rooms_number">Room number</label>
+                </div>
             </div>
-        </div>
+            <div class="row">
+                <div class="input-field col s12 m8 offset-m2">
+                    <i class="fas fa-clock  prefix teal-text text-lighten-2"></i>
+                    <input id="rooms_sched" name="rooms_sched" minlength="5" maxlength="50"
+                     type="text" class="validate" required>
+                    <label for="rooms_sched">Room Cleaning Schedule</label>
+                </div>
+            </div>
+            <div>   
+                <div class="input-field col s12 m8 offset-m2">
+                    <i class="fas fa-phone prefix teal-text text-lighten-2"></i>
+                    <input id="icon_telephone" type="tel" class="validate">
+                    <label for="icon_telephone">Telephone</label>
+                </div>
+            </div>
+           <div class="row"> 
+                <div class="input-field col s12 m8 offset-m2">
+                    <i class="fas fa-exclamation-circle fa-2x teal-text text-lighten-2"></i>
+                    <div class="switch">
+                        <label for="is_working">
+                          off
+                          <input type="checkbox" id="is_working" name="is_working">
+                          <span class="lever"></span>
+                          Is Working
+                        </label>
+                      </div>
+                </div>
+           </div>
         </form>
     </div>
 
