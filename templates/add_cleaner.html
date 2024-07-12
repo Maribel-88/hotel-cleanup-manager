@@ -5,20 +5,26 @@
 
     <div class="row card-panel grey lighten-5">
         <form class="col s12" methods="POST" action="">
+            
+            <div class="row">
+                <div class="input-field col s12 m8 offset-m2">
+                    <i class="fas fa-door-closed prefix teal-text text-lighten-2"></i>
+                    
+                        <select id="rooms_number">
+                            <option value="" disabled selected>Choose room</option>
+                            {% for room in rooms%}
+                            <option value="{{ room.rooms_number }}">{{ room.rooms_number }}</option>
+                            {% endfor %}
+                        </select>
+                        <label>Rooms Number</label>
+                </div>
+            </div>
             <div class="row">
                 <div class="input-field col s12 m8 offset-m2">
                     <i class="fas fa-user-circle prefix teal-text text-lighten-2"></i>
                     <input id="cleaner_name" name="cleaner_name" minlength="5" maxlength="50"
                      type="text" class="validate" required>
                     <label for="cleaner_name">Cleaner Name</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s12 m8 offset-m2">
-                    <i class="fas fa-door-closed prefix teal-text text-lighten-2"></i>
-                    <input id="rooms_number" name="rooms_number" minlength="5" maxlength="50"
-                     type="text" class="validate" required>
-                    <label for="rooms_number">Room number</label>
                 </div>
             </div>
             <div class="row">

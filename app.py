@@ -101,7 +101,8 @@ def logout():
 
 @app.route("/add_cleaner")
 def add_cleaner():
-    return render_template("add_cleaner.html")
+    rooms = mongo.db.rooms.find().sort("rooms_number", 1)
+    return render_template("add_cleaner.html", rooms=rooms)
 
 
 if __name__ == "__main__":
