@@ -22,7 +22,7 @@ mongo = PyMongo(app)
 
 
 def get_cleaner():
-    cleaners = mongo.db.cleaners.find()
+    cleaners = list(mongo.db.cleaners.find())
     return render_template("cleaners.html", cleaners=cleaners)
 
 
